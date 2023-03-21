@@ -38,23 +38,21 @@
 									<img src="images/icon/cor4.png" alt=""> <span>Requirements</span></a>
                                     </li>
                                     <li><a data-toggle="tab" href="#menu1"><img src="images/icon/cor3.png" alt=""><span>Fees</span></a></li>
-                                    <li><a data-toggle="tab" href="#menu2"><img src="images/icon/cor1.png" alt=""><span>Student Profile</span></a></li>
                                     <li><a data-toggle="tab" href="#menu2"><img src="images/icon/cor5.png" alt=""><span>How to Apply</span></a></li>
                                 </ul>
 
                                 <div class="tab-content">
                                     <div id="home" class="tab-pane fade in active">
-                                        <h4>Home</h4>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                                        <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                        <h4>Requirements Description:</h4>
+                                        <p>{{ $course->requirements }}</p>
                                     </div>
                                     <div id="menu1" class="tab-pane fade">
-                                        <h4>Menu 1</h4>
-                                        <p>Some content in menu 1.</p>
+                                        <h4>Fees Description:</h4>
+                                        <p>{{ $course->fees }}</p>
                                     </div>
                                     <div id="menu2" class="tab-pane fade">
-                                        <h4>Menu 2</h4>
-                                        <p>Some content in menu 2.</p>
+                                        <h4>Apply Details:</h4>
+                                        <p>{{ $course->apply }}</p>
                                     </div>
                                 </div>
                             </div>

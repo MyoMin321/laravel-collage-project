@@ -10,7 +10,9 @@ class BlogController extends Controller
 
     public function index(Blog $blogs)
     {
-        return view('blogs.index');
+        return view('blogs.index',[
+            'blogs' => Blog::all(),
+        ]);
     }
 
     public function show(Blog $blog)

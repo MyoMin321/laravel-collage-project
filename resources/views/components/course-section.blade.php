@@ -11,7 +11,7 @@
                                 <a href="course-details.html">
                                     <h3>{{ $course->title }}</h3>
                                 </a>
-                                <h4>Courses / {{$course->category->name}} / Aerospace</h4>
+                                <h4>Courses / {{$course->category->name}}</h4>
                                 <p>{!! Str::limit($course->body, 10) !!}</p> <span class="home-top-cour-rat">4.2</span>
                                 <div class="hom-list-share">
                                     <ul>

@@ -176,8 +176,8 @@
             <div class="row">
                 <div class="col-md-4">
                     <!--<div class="ho-ex-title">
-       <h4>Upcoming Event</h4>
-      </div>-->
+                        <h4>Upcoming Event</h4>
+                    </div>-->
                     <div class="ho-ev-latest ho-ev-latest-bg-1">
                         <div class="ho-lat-ev">
                             <h4>Upcoming Event</h4>
@@ -186,50 +186,7 @@
                     </div>
                     <div class="ho-event ho-event-mob-bot-sp">
                         <ul>
-                            <li>
-                                <div class="ho-ev-date"><span>07</span><span>jan,2018</span>
-                                </div>
-                                <div class="ho-ev-link">
-                                    <a href="events.html">
-                                        <h4>Latinoo College Expo 2018</h4>
-                                    </a>
-                                    <p>Nulla at velit convallis, venenatis lacus quis, efficitur lectus.</p>
-                                    <span>9:15 am – 5:00 pm</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ho-ev-date"><span>12</span><span>jan,2018</span>
-                                </div>
-                                <div class="ho-ev-link">
-                                    <a href="events.html">
-                                        <h4>Training at Team Fabio Clemente</h4>
-                                    </a>
-                                    <p>Nulla at velit convallis venenatis.</p>
-                                    <span>9:15 am – 5:00 pm</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ho-ev-date"><span>26</span><span>jan,2018</span>
-                                </div>
-                                <div class="ho-ev-link">
-                                    <a href="events.html">
-                                        <h4>Nulla at velit convallis</h4>
-                                    </a>
-                                    <p>Nulla at velit convallis, venenatis lacus quis, efficitur lectus.</p>
-                                    <span>9:15 am – 5:00 pm</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ho-ev-date"><span>18</span><span>jan,2018</span>
-                                </div>
-                                <div class="ho-ev-link">
-                                    <a href="events.html">
-                                        <h4>Admissions Information Session and Tour</h4>
-                                    </a>
-                                    <p>Nulla at velit convallis, venenatis lacus quis, efficitur lectus.</p>
-                                    <span>9:15 am – 5:00 pm</span>
-                                </div>
-                            </li>
+                            <x-home-upcoming-event-section :events="$events"/>                           
                         </ul>
                     </div>
                 </div>

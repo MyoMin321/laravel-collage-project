@@ -86,17 +86,25 @@
                                                 {{-- <label>Course Descriptions:</label> --}}
                                             </div>
                                         </div>
-                                            {{-- <div class="row">
-                                                <div class="input-field col s12">
-                                                    <select>
-									  <option value="" disabled selected>Select Status</option>
-									  <option value="1">Active</option>
-									  <option value="2">De-Active</option>
-									  <option value="3">Delete</option>
-									</select>
-                                                </div>
-                                            </div> --}}
-                                        
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <textarea class="editor" id="editor" name="requirements"></textarea>
+                                                <label>Requirements</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <textarea class="editor" id="editor" name="fees"></textarea>
+                                                <label>Fees Descriptions:</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <textarea class="editor" id="editor" name="apply"></textarea>
+                                                <label>How to apply?:</label>
+                                            </div>
+                                        </div>
+                                       
                                         <div class="row">
 											<div class="file-field input-field col s12">
 											    <div class="btn admin-upload-btn">

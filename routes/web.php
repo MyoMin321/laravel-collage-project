@@ -57,6 +57,8 @@ Route::get('/about', function () {
     return view('/about');
 });
 
+Route::get('blogs',[BlogController::class,'index']);
+
 Route::get('/history', function () {
     return view('/history');
 });
@@ -188,7 +190,9 @@ Route::get('/admin/teams/create', [AdminTeamController::class,'create']);
 Route::post('/admin/teams/store', [AdminTeamController::class,'store']);
 
 //admin blog
-Route::get('/blogs',[BlogController::class, 'index']);
+// Route::get('/blog',function(){
+//     dd('hit');
+// });
 Route::get('/blogs/{blog:title}',[BlogController::class, 'show']);
 Route::get('/admin/blogs',[AdminBlogController::class, 'index']);
 Route::get('admin/blogs/create',[AdminBlogController::class, 'create']);

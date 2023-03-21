@@ -18,6 +18,9 @@ class CreateCoursesTable extends Migration
             $table->string('title')->uniqid();
             $table->string('slug');
             $table->text('body');
+            $table->text('requirements');
+            $table->text('fees');
+            $table->text('apply');
             $table->string('thumbnail');
             $table->string('contact_person');
             $table->string('contact_phone');

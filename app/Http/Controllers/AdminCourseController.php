@@ -30,6 +30,9 @@ class AdminCourseController extends Controller
             "title" => ["required"],
             "slug" => ["required",Rule::unique('courses','slug')],
             "body" => ["required"],
+            "requirements" => ["required"],
+            "fees" => ["required"],
+            "apply" => ["required"],
             "contact_person" => ["required"],
             "contact_phone" => ["required"],
             "category_id" =>  ["required", Rule::exists('categories', 'id')]
