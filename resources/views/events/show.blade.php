@@ -21,7 +21,7 @@
 </div>
                                   <div class="pg-eve-desc pg-blog-desc">
                                       <a href="event-register.html">
-                                          <h4>{{ $event->name }}</h4>
+                                          <h4>{{ $event->name }}<small>&nbsp;&nbsp;{{ $event->created_at->diffForHumans() }}</small></h4>
                                       </a>
 											                <div class="share-btn blog-share-btn">
 											                	<ul>
@@ -37,7 +37,7 @@
                                       <p>
                                         {!! $event->description !!}
                                       </p>
-                                                          <span>{{ $event->created_at->diffForHumans() }}</span>
+                                                          
                                                       </div>
                                                   </li>
                                               </ul>

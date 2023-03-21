@@ -26,7 +26,7 @@
             <!--== MY ACCCOUNT ==-->
             <div class="col-md-2 col-sm-3 col-xs-6">
                 <!-- Dropdown Trigger -->
-                <a class='waves-effect dropdown-button top-user-pro' href='#' data-activates='top-menu'><img src="{{ auth()->user()->profile }}" alt="" />My Account <i class="fa fa-angle-down" aria-hidden="true"></i>
+                <a class='waves-effect dropdown-button top-user-pro' href='#' data-activates='top-menu'><img src="{{ auth()->user()->profile }}" alt="" />{{ auth()->user()->name }} <i class="fa fa-angle-down" aria-hidden="true"></i>
                 </a>
 
                 <!-- Dropdown Structure -->

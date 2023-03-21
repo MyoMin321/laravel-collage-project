@@ -52,5 +52,26 @@ class AdminBlogController extends Controller
             echo $response;
 
         }
-    }  
+    } 
+    
+    public function edit(Blog $blog)
+    {
+        return view('admin.blogs.edit',[
+            'blog' => $blog
+        ]);
+    }
+
+    public function update(Blog $blog)
+    {
+        $formData = request()->validate([
+            'title'=> ['required'],
+            'body'=> ['required'],
+        ]);
+
+        $formData['user_id'] = auth()->id();
+
+        $blog->update($formData);
+        
+        return redirect('/admin/blogs');
+    }
 }

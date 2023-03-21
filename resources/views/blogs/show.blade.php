@@ -8,7 +8,7 @@
                 <div class="cor about-sp">
                     <div class="ed-about-tit">
                         <div class="con-title">
-                            <h2>Experience of Studying <span> Abroad</span></h2>
+                            <h2>{{ $blog->title }}</h2>
                             <p>Fusce id sem at ligula laoreet hendrerit venenatis sed purus. Ut pellentesque maximus lacus, nec pharetra augue.</p>
                         </div>
                         <div>
@@ -19,7 +19,7 @@
                                         </div>
                                         <div class="pg-eve-desc pg-blog-desc">
                                             <a href="event-register.html">
-                                                <h4>{{ $blog->title }}</h4>
+                                                <h4>{{ $blog->title }}<small>&nbsp;{{ $blog->created_at->diffForHumans() }}</small></h4>
                                             </a>
 											<div class="share-btn blog-share-btn">
 												<ul>
@@ -35,7 +35,6 @@
                                             <p class="text-justify">
                                               {!! $blog->body !!}
                                             </p>
-                                            <span>{{ $blog->created_at->diffForHumans() }}</span>
 
                                             <div class="cor-p6">
                                                 <h3>Write Comments</h3>

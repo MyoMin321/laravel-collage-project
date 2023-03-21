@@ -15,6 +15,6 @@
       <td>
           <span class="label label-success">Active</span>
       </td>
-			<td><a href="/admin/events/edit" class="ad-st-view">Edit</a></td>
+			<td><a href="/admin/events/{{ $event->name }}/edit" class="ad-st-view">Edit</a></td>
       </tr>   
 @endforeach                                        

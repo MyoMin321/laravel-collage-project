@@ -57,8 +57,6 @@ Route::get('/about', function () {
     return view('/about');
 });
 
-Route::get('blogs',[BlogController::class,'index']);
-
 Route::get('/history', function () {
     return view('/history');
 });
@@ -189,15 +187,15 @@ Route::get('/admin/teams', [AdminTeamController::class,'index']);
 Route::get('/admin/teams/create', [AdminTeamController::class,'create']);
 Route::post('/admin/teams/store', [AdminTeamController::class,'store']);
 
-//admin blog
-// Route::get('/blog',function(){
-//     dd('hit');
-// });
+//Admin Blogs
+Route::get('/university-blogs',[BlogController::class,'index']);
 Route::get('/blogs/{blog:title}',[BlogController::class, 'show']);
 Route::get('/admin/blogs',[AdminBlogController::class, 'index']);
 Route::get('admin/blogs/create',[AdminBlogController::class, 'create']);
 Route::post('admin/blogs/store',[AdminBlogController::class, 'store']);
 Route::post('upload_image',[AdminBlogController::class, 'uploadImage'])->name('upload');
+Route::get('/admin/blogs/{blog:title}/edit',[AdminBlogController::class,'edit']);
+Route::patch('/admin/blogs/{blog:title}/update',[AdminBlogController::class,'update']);
 
 //Admin Slides
 Route::get('/admin/slides',[AdminSlideController::class,'index']);
@@ -218,7 +216,7 @@ Route::get('/events/event-details', [EventController::class,'details']);
 Route::get('/admin/events', [AdminEventController::class,'index']);
 Route::get('/admin/events/create', [AdminEventController::class,'create']);
 Route::post('/admin/events/post', [AdminEventController::class,'store']);
-Route::get('/admin/events/edit', [AdminEventController::class,'edit']);
+Route::get('/admin/events/{event:name}/edit', [AdminEventController::class,'edit']);
 Route::patch('/admin/events/{event:name}/update', [AdminEventController::class,'update']);
 
 //Admin Seminars
