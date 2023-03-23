@@ -7,9 +7,10 @@
   </div>
   <div class="pg-eve-desc pg-blog-desc">
   <a href="/blogs/{{ $blog->title }}">
-      <h4>{{ $blog->title }}</h4>
+      <h3>{{ $blog->title }}<small>&nbsp; {{ $blog->created_at->diffForHumans() }}</small></h3>
   </a>
-			<img src="images/blog/6.jpg" alt="">
+			<img src="/storage/{{ $blog->image }}" alt="">
+      <p>{{ Str::limit(strip_tags($blog->body), 300) }}</p>
 			<div class="share-btn blog-share-btn">
 				<ul>
 					<li><a href="#"><i class="fa fa-facebook fb1"></i> Share On Facebook</a>
@@ -23,10 +24,9 @@
       <p>
 
       </p>
-        <span>9:15 am – 5:00 pm</span>
     </div>
     <div class="pg-eve-reg pg-blog-reg">
-        <a href="blog-details.html">Read more</a>
+        <a href="/blogs/{{ $blog->title }}">Read more</a>
     </div>
 </li>
 @endforeach

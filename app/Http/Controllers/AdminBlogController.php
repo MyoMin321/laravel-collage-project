@@ -12,7 +12,7 @@ class AdminBlogController extends Controller
     public function index(Blog $blogs)
     {
         return view('admin.blogs.index',[
-            'blogs' => Blog::all()
+            'blogs' => Blog::latest()->get()
         ]);
     }
 
@@ -25,9 +25,11 @@ class AdminBlogController extends Controller
     {
         $formData = request()->validate([
             'title' => ['required',Rule::unique('blogs','title')],
+            'image' => ['required'],
             'body' => ['required'],
         ]);
 
+        $formData['image'] = request()->file('image')->store('blogs');
         $formData['user_id'] = auth()->id();
 
         Blog::create($formData);
@@ -67,6 +69,9 @@ class AdminBlogController extends Controller
             'title'=> ['required'],
             'body'=> ['required'],
         ]);
+
+        $formData['image'] = request()->file('image') ? 
+            request()->file('image')->store('blogs') : $blog->image;
 
         $formData['user_id'] = auth()->id();
 

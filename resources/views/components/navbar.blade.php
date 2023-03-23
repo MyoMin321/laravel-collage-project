@@ -4,7 +4,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="wed-logo">
-                            <a href="/index-2"><img src="images/logo.png" alt="" />
+                            <a href="/index-2"><img src="images/PIU-logo.png" alt="" />
                             </a>
                         </div>
                         <div class="main-menu">
@@ -55,7 +55,7 @@
                                     </div>
                                 </li>
                                 <li class="admi-menu">
-                                    <a href="#" class="mm-arr">Admission</a>
+                                    <a href="/admissions" class="mm-arr">Admission</a>
                                     <!-- MEGA MENU 1 -->
                                     <div class="mm-pos">
                                         <div class="admi-mm m-menu">
@@ -126,19 +126,13 @@
                                                 <div class="mm1-com mm1-cour-com mm1-s3">
                                                     <h4>Frontend pages:1</h4>
                                                     <ul>
-                                                        <li><a href="/">Home</a></li>
-                                                        <li><a href="/index-1">Home - 1</a></li>
                                                         <li><a href="/courses">All Courses</a></li>
-                                                        <li><a href="/course-details">Course Details</a></li>
-                                                        <li><a href="/about">About us</a></li>
                                                         <li><a href="/admission">admission</a></li>
                                                         <li><a href="/awards">awards</a></li>
-                                                        <li><a href="/blog">blog</a></li>
-                                                        <li><a href="/blog-details">blog details</a></li>
+                                                        <li><a href="/blogs">blog</a></li>
                                                         <li><a href="/contact-us">contact us</a></li>
                                                         <li><a href="/departments">Departments</a></li>
                                                         <li><a href="/events">events</a></li>
-                                                        <li><a href="/event-details">event details</a></li>
                                                         <li><a href="/event-register">event register</a></li>
                                                     </ul>
                                                 </div>
@@ -166,7 +160,6 @@
                                                         <li><a href="/admin">admin</a></li>
                                                         <li><a href="/admin/courses/create">Add new course</a></li>
                                                         <li><a href="/admin-all-courses">All courses</a></li>
-                                                        <li><a href="/admin-student-details">Student details</a></li>
                                                         <li><a href="/admin-user-add">Add new user</a></li>
                                                         <li><a href="/admin-user-all">All users</a></li>
                                                         <li><a href="/admin-panel-setting">Admin setting</a></li>
@@ -174,27 +167,21 @@
                                                         <li><a href="/admin-event-all">event all</a></li>
                                                         <li><a href="/admin-setting">Admin Setting</a></li>
                                                         <li><a href="/admin-slider">Slider setting</a></li>
-                                                        <li><a href="/admin-slider-edit">Slider edit</a></li>
-                                                        <li><a href="/admin-course-details">course details</a></li>
                                                         <li><a href="/admin-login">admin login</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="mm1-com mm1-cour-com mm1-s3">
                                                     <h4>Admin panel:2</h4>
                                                     <ul>
-                                                        <li><a href="/admin-event-edit">event edit</a></li>
                                                         <li><a href="/admin-exam-add">exam add</a></li>
                                                         <li><a href="/admin-exam-all">exam all</a></li>
-                                                        <li><a href="/admin-exam-edit">exam edit</a></li>
                                                         <li><a href="/admin-export-data">export data</a></li>
                                                         <li><a href="/admin-import-data">import data</a></li>
                                                         <li><a href="/admin-job-add">Add new jobs</a></li>
                                                         <li><a href="/admin-job-all">All jobs</a></li>
-                                                        <li><a href="/admin-job-edit">Edit job</a></li>
                                                         <li><a href="/admin-main-menu">main menu</a></li>
                                                         <li><a href="/admin-page-add">Add new page</a></li>
                                                         <li><a href="/admin-page-all">All pages</a></li>
-                                                        <li><a href="/admin-page-edit">Edit page</a></li>
                                                         <li><a href="/admin-forgot">forgot password</a></li>
                                                     </ul>
                                                 </div>
@@ -202,17 +189,10 @@
                                                     <h4>Admin panel:3</h4>
                                                     <ul>
                                                         <li><a href="/admin-quick-link">quick link</a></li>
-                                                        <li><a href="/admin-seminar-add">Add new seminar</a></li>
                                                         <li><a href="/admin-seminar-all">All seminar</a></li>
-                                                        <li><a href="/admin-seminar-edit">Edit seminar</a></li>
-                                                        <li><a href="/admin-seminar-enquiry">Semester enquiry</a></li>
-                                                        <li><a href="/admin-all-enquiry">All enquiry</a></li>
-                                                        <li><a href="/admin-view-enquiry">All enquiry view</a></li>
-                                                        <li><a href="/admin-event-enquiry">event enquiry</a></li>
                                                         <li><a href="/admin-admission-enquiry">Admission enquiry</a>
                                                         </li>
                                                         <li><a href="/admin-common-enquiry">common enquiry</a></li>
-                                                        <li><a href="/admin-course-enquiry">course enquiry</a></li>
                                                         <li><a href="/admin-all-menu">menu all</a></li>
                                                         <li><a href="/admin-about-menu">Menu - About</a></li>
                                                         <li><a href="/admin-admission-menu">Menu - admission</a></li>

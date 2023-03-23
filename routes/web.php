@@ -8,6 +8,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\SeminarController;
 use App\Http\Controllers\AdminBlogController;
+use App\Http\Controllers\AdmissionsController;
 use App\Http\Controllers\AdminTeamController;
 use App\Http\Controllers\AdminEventController;
 use App\Http\Controllers\AdminSlideController;
@@ -30,20 +31,29 @@ use App\Models\User;
 |
 */
 
-Route::get('/',[HomeController::class, 'index']);
+// Route::get('/',[HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
+
+// Auth::routes(['verify' => true]);
+Route::get('email/verify', [HomeController::class, 'show'])->name('verification.notice');
+Route::get('email/verify/{id}/{hash}', [VerificationController::class, 'verify'])->name('verification.verify');
+Route::post('email/resend', [VerificationController::class, 'resend'])->name('verification.resend');
+
 
 //register route
 Route::get('/register', [UserController::class,'register'])->name('create');
 Route::post('/registration', [UserController::class,'store']);
 
 //logout route
-Route::get('/login', 'App\Http\Controllers\UserController@login')->name('login');
+Route::get('/login', [UserController::class,'login']);
 Route::post('/login', [UserController::class,'post_login']);
 
 //logout route
 Route::post('/logout', [UserController::class,'logout']);
 
-//course create
+Route::get('/home', [HomeController::class, 'index'])
+    ->middleware(['auth', 'verified']);
+
 
 //courses show
 // Route::get('/courses/{course:title}', [CourseController::class,'show'])->where('title','[A-z\d\-_]+');
@@ -121,10 +131,9 @@ Route::get('/contact-us', function () {
     return view('/contact-us');
 });
 
-
-Route::get('/admission', function () {
-    return view('/admission');
-});
+//Admin Admission
+Route::get('/admissions',[AdmissionsController::class,'create']);
+Route::post('/admissions/create',[AdmissionsController::class,'store']);
 
 Route::get('/awards', function () {
     return view('/awards');

@@ -35,8 +35,10 @@ class UserController extends Controller
 
     public function login()
     {
-        return ('auth.login');
+        return view('auth.login');
     }
+
+    
     public function post_login()
     {
         //validation

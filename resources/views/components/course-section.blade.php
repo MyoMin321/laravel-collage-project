@@ -8,7 +8,7 @@
                             <div class="col-md-3"> <img src="/storage/{{ $course->thumbnail }}" alt="" class=""> </div>
                             <!--POPULAR COURSES: CONTENT-->
                             <div class="col-md-9 home-top-cour-desc">
-                                <a href="course-details.html">
+                                <a href="/courses/{{ $course->slug }}">
                                     <h3>{{ $course->title }}</h3>
                                 </a>
                                 <h4>Courses / {{$course->category->name}}</h4>

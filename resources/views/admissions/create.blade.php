@@ -14,53 +14,91 @@
             <div class="col-md-6 col-sm-12 col-xs-12">
                 <div class="n-form-com admiss-form">
                     <div class="col s12">
-                        <form class="form-horizontal">
+                        <form class="form-horizontal" action="admissions/create" method="POST">
+                            @csrf
                             <div class="form-group">
                                 <label class="control-label col-sm-3">Full Name:</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" placeholder="Enter your name" required>
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                                    @error('name')
+                                        <p class="text-danger">{{$message}}</p>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Email:</label>
+                                <div class="col-sm-9">
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                    @error('email')
+                                        <p class="text-danger">{{$message}}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-sm-3">Phone:</label>
                                 <div class="col-sm-9">
-                                    <input type="number" class="form-control" placeholder="Enter your phone number" required>
+                                    <input type="number" name="phone" class="form-control" placeholder="Phone" required>
+                                    @error('phone')
+                                        <p class="text-danger">{{$message}}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-sm-3">Email Id:</label>
+                                <label class="control-label col-sm-3">Your Country:</label>
                                 <div class="col-sm-9">
-                                    <input type="email" class="form-control" placeholder="Enter email" required>
+                                    <input type="text" name="country" class="form-control" placeholder="Country">
+                                    @error('country')
+                                        <p class="text-danger">{{$message}}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-sm-3">Your City:</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" placeholder="Enter your city">
+                                    <input type="text" name="city" class="form-control" placeholder="City">
+                                    @error('city')
+                                        <p class="text-danger">{{$message}}</p>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Zip Code:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="zipcode" class="form-control" placeholder="Zip Code">
+                                    @error('zipcode')
+                                        <p class="text-danger">{{$message}}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-sm-3">Education:</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" placeholder="Enter your education">
+                                    <select name="education">
+								        <option>-- Your Education Level --</option>
+								        <option value="doctoris">Doctoris</option>
+								        <option value="master">Master's</option>							
+								        <option value="bachelor">Bachelor</option>
+								        <option value="under-graduate">Under Graduate</option>
+								        <option value="higher-education">Higher Education Level</option>
+								        <option value="elementary-education">Elementary Education</option>
+								        <option value="other">Other</option>
+                                        @error('education')
+                                            <p class="text-danger">{{$message}}</p>
+                                        @enderror
+							        </select>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-sm-3">Course:</label>
                                 <div class="col-sm-9">
-                                    <select>
-								<option>-- Select course --</option>
-								<option>Aerospace Engineering</option>
-								<option>Agriculture Courses</option>							
-								<option>Fashion Technology</option>
-								<option>Marine Engineering</option>
-								<option>Building, Construction Management</option>
-								<option>Web Development</option>
-								<option>Accountant course</option>
-								<option>Dot Net Development</option>
-								<option>Java Development</option>
-								<option>Chemical Engineering</option>
-							  </select>
+                                    <select name="course_id">
+								        <option value="" disabled selected>-- Select course --</option>
+                                            @foreach ($courses as $course)
+								                <option {{ $course->id==old('course_id') ? 'selected' : '' }} value="{{ $course->id }}">
+                                                    {{ $course->title }}
+                                        </option>
+                                            @endforeach
+							        </select>
                                 </div>
                             </div>
                             <div class="form-group mar-bot-0">
